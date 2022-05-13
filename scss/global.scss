@@ -1,0 +1,126 @@
+@import 'default';
+@import 'header';
+@import 'swiper';
+@import 'index';
+@import 'footer';
+@import 'page';
+@import 'hamburger';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: $text-font;   
+}
+
+main {
+    color: $text-color;
+}
+
+input{
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.show {
+    display: block !important;
+}
+
+.container, .page-container, .main-container, .bottom-container{
+    margin-left: auto;
+    margin-right: auto;
+
+    @media(max-width:576px){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }   
+}
+
+.container{
+    max-width: 1220px;   
+
+     /* Portrait */
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 700px;   
+    }
+
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1180px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 900px;   
+    }
+}
+
+.page-container{
+    max-width: 1777px;       
+}
+
+.main-container{
+    max-width: 840px;   
+
+     /* Portrait */
+     @media only screen 
+     and (min-device-width: 768px) 
+     and (max-device-width: 1024px) 
+     and (orientation: portrait) 
+     and (-webkit-min-device-pixel-ratio: 1) {
+         max-width: 550px;   
+     }
+
+     /* Landscape */
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1180px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 650px;   
+    }
+}
+
+.bottom-container{
+    max-width: 1792px;
+}
+
+h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+a{
+    color: $anchor-color;
+    display: block;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+p{
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+main {
+    a{
+        display: inline;
+    }
+
+    ul{
+        list-style-position: inside;
+        color: $anchor-color;
+        margin-bottom: 1rem;
+
+        li{           
+            padding: 1rem 0;            
+        }
+    }
+}
