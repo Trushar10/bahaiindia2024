@@ -291,7 +291,7 @@
 
 @media (max-width: 1366px) {
   .swiper img {
-    height: 450px;
+    height: 500px;
   }
 }
 
@@ -379,6 +379,10 @@
   width: 100%;
 }
 
+.footer .footer-menu a {
+  color: #fff;
+}
+
 .footer .footer-menu ul {
   list-style: disc;
   margin-left: 1rem;
@@ -386,7 +390,6 @@
 }
 
 .footer .footer-menu ul a {
-  color: #fff;
   display: inline;
 }
 
@@ -666,6 +669,12 @@
   width: 40%;
   /* Portrait */
   /* Landscape */
+}
+
+@media (min-width: 576px) and (max-width: 1366px) {
+  .s-d-flex .side-nav {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 781px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {

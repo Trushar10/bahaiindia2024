@@ -53,6 +53,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </ul>
 
                     <h2>Contact Us</h2>
+                    <p>6 – Shrimant Madhavrao Scindia Marg, <br>
+                        New Delhi -110001 <br>
+                        +91-11-23387004</p>
+                    <a href="contact">Mail to us</a>
                 </div>
             </div>
             <div class="copyright">

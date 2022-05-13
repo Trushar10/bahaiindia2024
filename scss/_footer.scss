@@ -51,13 +51,16 @@
             width: 100%;
         }
 
+        a{
+            color: $hf-anchor-color;
+        }
+
         ul{
             list-style: disc;
             margin-left: 1rem;
             margin-bottom: 1rem;
             
-            a{
-                color: $hf-anchor-color;
+            a{                
                 display: inline;
 
                 &:hover{

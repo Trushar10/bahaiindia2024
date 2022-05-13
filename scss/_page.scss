@@ -179,6 +179,10 @@
     .side-nav{
         width: 40%;
 
+        @media(min-width:576px) and (max-width:1366px){
+            width: 80%;
+        }
+
         /* Portrait */
         @media only screen 
         and (min-device-width: 600px) 
