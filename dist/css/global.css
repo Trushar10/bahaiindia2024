@@ -417,6 +417,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .footer .copyright span {
+    font-size: .8rem;
+  }
+}
+
 .footer .copyright h4 {
   font-weight: 100;
   margin-bottom: 0;
