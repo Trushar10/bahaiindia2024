@@ -37,6 +37,7 @@
 
         @media(max-width:576px){
             flex-direction: column;
+            padding-bottom: 1rem;
         }
 
         h2{
@@ -74,6 +75,7 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 1rem;
+        align-items: center;
 
         @media(max-width:576px){
             flex-direction: column;
