@@ -1,5 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+.lsa-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lsa-address .address-filter {
+  margin-bottom: 2rem;
+}
+
+.lsa-address .address-filter select {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+}
+
+.lsa-address table {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+}
+
+@media (max-width: 576px) {
+  .lsa-address table {
+    border: 1px solid currentColor;
+  }
+}
+
+.lsa-address table tr, .lsa-address table td, .lsa-address table th {
+  text-align: start;
+  border: 1px solid currentColor;
+}
+
+@media (max-width: 576px) {
+  .lsa-address table tr, .lsa-address table td, .lsa-address table th {
+    border: none;
+  }
+}
+
+.lsa-address table th, .lsa-address table td {
+  padding: .5rem 1rem;
+}
+
+.lsa-address table th p, .lsa-address table td p {
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.lsa-address table thead {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 576px) {
+  .lsa-address table thead {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .lsa-address table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+@media (max-width: 576px) {
+  .lsa-address table tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+}
+
+.lsa-address table tr th:first-child {
+  width: 15%;
+}
+
+@media (max-width: 576px) {
+  .lsa-address table tr th:first-child {
+    width: auto;
+  }
+}
+
+.lsa-address table tr th:nth-child(2) {
+  width: 20%;
+}
+
+@media (max-width: 576px) {
+  .lsa-address table tr th:nth-child(2) {
+    width: auto;
+  }
+}
+
+.lsa-address table tr th:nth-child(3) {
+  width: 30%;
+}
+
+@media (max-width: 576px) {
+  .lsa-address table tr th:nth-child(3) {
+    width: auto;
+  }
+}
+
 .bg-grey {
   background-color: #404348;
 }
