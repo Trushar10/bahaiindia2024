@@ -478,6 +478,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     padding-bottom: 1rem;
+    gap: 1rem;
   }
 }
 
