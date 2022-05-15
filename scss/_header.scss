@@ -80,6 +80,16 @@
 
     #menu-right-menu{
         justify-content: flex-end;
+
+        .sub-menu{
+            li {
+                border-bottom: 1px solid #00000014;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
     }  
 
     .mobile-menu{
