@@ -16,11 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="bg-grey">
         <div class="footer container">
             <div class="footer-menu">
-                <!-- <div>
-                    <input type="text" />
-                </div> -->
                 <div>
-                    <h2>Religion Renewed</h2>
+                    <h2><?php echo get_theme_mod( 'footer_heading_1' ); ?></h2>
                     <?php
             
                         wp_nav_menu([
@@ -32,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     ?>
                 </div>
                 <div>
-                    <h2>Community Building</h2>
+                    <h2><?php echo get_theme_mod( 'footer_heading_2' ); ?></h2>
                     <?php
             
                         wp_nav_menu([
@@ -44,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     ?>
                 </div>
                 <div>
-                    <h2>Announcement</h2>
+                    <h2><?php echo get_theme_mod( 'footer_heading_3' ); ?></h2>
                     <ul>
                         <li>
                             <a href="source-of-guidance.html">Role of Religion in Fight against
@@ -52,11 +49,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </li>
                     </ul>
 
-                    <h2>Contact Us</h2>
-                    <p>6 – Shrimant Madhavrao Scindia Marg, <br>
-                        New Delhi -110001 <br>
-                        +91-11-23387004</p>
-                    <a href="contact" aria-label="contact">Mail to us</a>
+                    <h2><?php echo get_theme_mod( 'footer_heading_4' ); ?></h2>
+                    <p><?php echo get_theme_mod( 'footer_address_1' ); ?>
+                        <br><?php echo get_theme_mod( 'footer_address_2' ); ?>
+                        <br><?php echo get_theme_mod( 'footer_address_3' ); ?>
+                    </p>
+                    <a href="contact"><?php echo get_theme_mod( 'contact-link' ); ?></a>
                 </div>
             </div>
             <div class="copyright">
