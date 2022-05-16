@@ -503,6 +503,7 @@
 }
 
 .footer .footer-menu a {
+  display: inline-block;
   color: #fff;
 }
 
