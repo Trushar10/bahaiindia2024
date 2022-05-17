@@ -53,8 +53,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <p><?php echo get_theme_mod( 'footer_address_1' ); ?>
                         <br><?php echo get_theme_mod( 'footer_address_2' ); ?>
                         <br><?php echo get_theme_mod( 'footer_address_3' ); ?>
+                        <br><?php echo get_theme_mod( 'footer_address_4' ); ?>
                     </p>
-                    <a href="contact"><?php echo get_theme_mod( 'contact-link' ); ?></a>
+                    <a href="https://trial.trushargavit.com/contact/"><?php echo get_theme_mod( 'contact-link' ); ?></a>
                 </div>
             </div>
             <div class="copyright">

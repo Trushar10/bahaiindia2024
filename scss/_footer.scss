@@ -33,6 +33,7 @@
     .footer-menu{    
         display: flex; 
         border-bottom: 1px solid #ffffff21;
+        padding-bottom: 1rem;
         gap: 2rem;
 
         @media(max-width:576px){

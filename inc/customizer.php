@@ -96,7 +96,7 @@ function bahaiindia_register_theme_customizer( $wp_customize ) {
   
     // Add setting
     $wp_customize->add_setting( 'footer_address_1', array(
-        'default'           => __( '6 – Shrimant Madhavrao Scindia Marg,', 'bahaiindia' ),
+        'default'           => __( 'National Bahá’i Centre', 'bahaiindia' ),
         'sanitize_callback' => 'sanitize_text'
     ) );
 
@@ -115,7 +115,7 @@ function bahaiindia_register_theme_customizer( $wp_customize ) {
     
     // Add setting
     $wp_customize->add_setting( 'footer_address_2', array(
-        'default'           => __( 'New Delhi -110001', 'bahaiindia' ),
+        'default'           => __( '6 – Shrimant Madhavrao Scindia Marg,', 'bahaiindia' ),
         'sanitize_callback' => 'sanitize_text'
     ) );
 
@@ -132,9 +132,9 @@ function bahaiindia_register_theme_customizer( $wp_customize ) {
         )
     );
 
-      // Add setting
-      $wp_customize->add_setting( 'footer_address_3', array(
-        'default'           => __( '+91-11-23387004', 'bahaiindia' ),
+    // Add setting
+    $wp_customize->add_setting( 'footer_address_3', array(
+        'default'           => __( 'New Delhi -110001', 'bahaiindia' ),
         'sanitize_callback' => 'sanitize_text'
     ) );
 
@@ -151,6 +151,25 @@ function bahaiindia_register_theme_customizer( $wp_customize ) {
         )
     );
 
+     // Add setting
+     $wp_customize->add_setting( 'footer_address_4', array(
+        'default'           => __( '+91-11-23387004', 'bahaiindia' ),
+        'sanitize_callback' => 'sanitize_text'
+    ) );
+
+    // Add control
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'footer-8',
+            array(
+                'label'    => __( 'Address 4', 'bahaiindia' ),
+                'section'  => 'footer_section',
+                'settings' => 'footer_address_4',
+                'type'     => 'text'
+            )
+        )
+    );
+
     // Add setting
     $wp_customize->add_setting( 'contact-link', array(
         'default'           => __( 'Mail to us', 'bahaiindia' ),
@@ -160,7 +179,7 @@ function bahaiindia_register_theme_customizer( $wp_customize ) {
     // Add control
     $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'footer-8',
+        'footer-9',
             array(
                 'label'    => __( 'Contact-Us', 'bahaiindia' ),
                 'section'  => 'footer_section',
