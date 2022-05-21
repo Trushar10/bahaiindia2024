@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+@import url("https://use.typekit.net/vce1czb.css");
 .lsa-address {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,13 +171,23 @@
 }
 
 .header .site-identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   width: 100%;
 }
 
 .header .site-identity .site-title {
   font-size: 2.3rem;
-  font-weight: 400;
+  font-weight: 100;
   display: inline-block;
   line-height: 1;
   margin-bottom: 0;
@@ -189,10 +199,15 @@
   }
 }
 
+.header .site-identity .site-title a {
+  line-height: 1 !important;
+}
+
 .header .site-identity .site-description {
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 500;
+  line-height: 1;
   margin-bottom: 0;
 }
 
@@ -415,7 +430,7 @@
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .swiper img {
     height: 500px;
   }
@@ -836,8 +851,8 @@
 
 @media (max-width: 1366px) {
   .flex-basis-58 {
-    -ms-flex-preferred-size: 58% !important;
-        flex-basis: 58% !important;
+    -ms-flex-preferred-size: 60% !important;
+        flex-basis: 60% !important;
   }
 }
 
@@ -1051,12 +1066,14 @@ input {
 h2, h3, h4, h5, h6 {
   font-weight: 500;
   margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
 a {
   color: #206198;
   display: block;
   text-decoration: none;
+  line-height: 1.3;
 }
 
 a:hover {
@@ -1066,6 +1083,7 @@ a:hover {
 p {
   text-align: justify;
   margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
 main a {

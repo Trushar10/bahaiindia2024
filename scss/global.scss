@@ -93,12 +93,14 @@ input{
 h2,h3,h4,h5,h6 {
     font-weight: 500;
     margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
 a{
     color: $anchor-color;
     display: block;
     text-decoration: none;
+    line-height: 1.3;
 
     &:hover{
         text-decoration: underline;
@@ -108,6 +110,7 @@ a{
 p{
     text-align: justify;
     margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
 main {
