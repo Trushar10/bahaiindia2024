@@ -1,140 +1,268 @@
-<?php 
+<?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // For security
+if (!defined('ABSPATH')) {
+    exit; // For security
 }
 
-get_header(); 
+get_header();
 
 ?>
 
-<section>
+<main>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+            <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <?php if ($image_url = get_theme_mod('swiper_image_' . $i)) : ?>
             <div class="swiper-slide">
-                <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/1.webp" alt="" />
+                <div class="swiper-overlay"></div>
+                <img src="<?php echo $image_url; ?>" class="h-60" />
             </div>
-            <div class="swiper-slide">
-                <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/2.webp" alt="" />
+            <?php endif; ?>
+            <?php endfor; ?>
+        </div>
+    </div>
+    <div class="gradient-1 py-5">
+        <div class="front-design"></div>
+        <div class="box-container">
+            <div class="quote">
+                <h2>
+                    <?php echo get_theme_mod('quote_setting', ''); ?><br /><br />–
+                    <?php echo get_theme_mod('author_setting', ''); ?>
+                </h2>
             </div>
-            <div class="swiper-slide">
-                <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/3.webp" alt="" />
-            </div>
-            <div class="swiper-slide">
-                <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/4.webp" alt="" />
+            <div class="spacer-5"></div>
+            <div class="featured-stories">
+                <div class="story-cards">
+                    <?php
+                    // Query to get 3 posts per page
+                    query_posts('posts_per_page=3');
+
+                    if (have_posts()) {
+                        while (have_posts()) {
+                            the_post();
+
+                            get_template_part('template-parts/posts/content-stories');
+                        }
+                    }
+
+                    // Reset Query
+                    wp_reset_query();
+                    ?>
+
+                </div>
+                <div class="light-box">
+                    <div class="box-wrapper">
+                        <div class="box">
+                            <span class="close-btn">&times</span>
+                            <h2></h2>
+                            <!-- <p class="box-excerpt"></p> -->
+                            <img src="" alt="" class="light-img" />
+                            <p class="box-content"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
-<main>
-    <div class="main-container">
-        <div class="quote">
-            <h2>
-                “The fundamental purpose animating the Faith of God and
-                His Religion is to safeguard the interests and promote
-                the unity of the human race, and to foster the spirit of
-                love and fellowship amongst men.”
-            </h2>
-            <h3>— <a href="bahaullah.html">Bahá’u’lláh</a></h3>
+    <div class="quote-highlight">
+        <div class="box-container">
+            <div class="quote-card">
+                <div>
+                    <h2>
+                        <?php echo get_theme_mod('quote_1_setting', ''); ?><br /><br /><?php echo get_theme_mod('author_1_setting', ''); ?>
+                    </h2>
+                </div>
+            </div>
         </div>
-        <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/design1.webp" class="content-divider"
-            alt="divider" width="229" height="23" />
-        <p>
-            Throughout the world, in cities, villages and towns,
-            millions of Bahá’ís are striving to build communities that
-            are spiritually and materially prosperous. Joining hands
-            with all those who yearn to build a better world, they are
-            laboring to lay the foundations of a new civilization
-            through activities and programs centred on worship and
-            service. For the followers of the Bahá’í Faith, which is the
-            youngest world religion, these efforts are part of a vast
-            global undertaking whose overarching purpose is the
-            spiritual and the material unification of the human race.
-        </p>
-        <p>
-            In India, Bahá’ís hail from every conceivable background –
-            from the jungles of the Andamans to the high rises of
-            Mumbai, from the coastline of Tamil Nadu to the mountainous
-            regions of Sikkim. Through opening their homes for
-            gatherings for collective worship, for classes for the
-            spiritual education of children, adolescents and adults,
-            they are collaborating with the inhabitants of their
-            localities in diverse settings to weave a pattern of
-            community life characterized by unity, justice and devotion
-            to the common good.
-        </p>
-        <p>
-            As the vast, ancient and diverse nation of India courses its
-            way majestically into the twenty first century, new horizons
-            open before it. The opportunities and challenges that this
-            future brings demands of individuals, institutions and
-            communities new levels of spiritual maturity and
-            intellectual capacity to thrive in a complex, highly
-            interconnected world.
-        </p>
-        <p>
-            The Bahá’í community of India is deeply committed to the
-            processes of capacity building and learning that would equip
-            the country’s masses with the spiritual insights and the
-            scientific outlook needed to build a world based on justice
-            and oneness.
-        </p>
-        <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/design1-flip.webp" class="content-divider"
-            alt="divider" width="229" height="23" />
     </div>
-    <div class="bottom-container bottom">
-        <div>
-            <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/design2a.webp" class="design-img"
-                alt="" />
-        </div>
-        <div class="bottom-card">
-            <div class="card">
-                <a href="religion-renewed.html"><img
-                        src="https://trial.trushargavit.com/wp-content/uploads/2022/05/home-image1.webp"
-                        alt="religion-renewed" aria-label="religion-renewed" width="349" height="224" /></a>
-                <h3>Religion Renewed</h3>
-                <p>
-                    Throughout history, God revealed Himself to humanity
-                    through a series of Divine Messengers. Baha’u’llah
-                    is the latest of these Messengers who has brought
-                    spiritual and social teachings for our modern age.
-                </p>
-                <a href="religion-renewed.html">read more...</a>
-            </div>
-            <div class="card">
-                <a href="community-building.html" aria-label="community-building"><img
-                        src="https://trial.trushargavit.com/wp-content/uploads/2022/05/home-image2.webp"
-                        alt="community-building" width="349" height="224" /></a>
-                <h3>Community Building</h3>
-                <p>
-                    Throughout India, individuals from all backgrounds
-                    and in diverse settings are laying the foundations
-                    of communities that are spiritually and materially
-                    prosperous. They strive to serve the common good
-                    through activities that revolve around the axis of
-                    worship and service.
-                </p>
-                <a href="community-building.html">read more...</a>
-            </div>
-            <div class="card">
-                <a href="house-of-worship.html" aria-label="house-of-worship"><img
-                        src="https://trial.trushargavit.com/wp-content/uploads/2022/05/home-image3.webp"
-                        alt="house-of-worship" width="349" height="224" /></a>
-                <h3>House of Worship</h3>
-                <p>
-                    The Baha’i House of Worship brings together two
-                    interrelated aspects of community life - worship and
-                    service. The House of Worship symbolizes the oneness
-                    of religion and and the idea that the teachings of
-                    the Messengers or Avataars of God are all ultimately
-                    doors to one reality.
-                </p>
-                <a href="house-of-worship.html">read more...</a>
+    <div class="box-container py-4 index-content">
+        <figure>
+            <img src="https://www.bahai.in/wp-content/uploads/2023/10/divider-up-svg.svg" alt="" class="divider">
+        </figure>
+        <div class="spacer-2"></div>
+        <p>
+            <?php echo get_theme_mod('paragraph_1_setting', ''); ?>
+        </p>
+        <p>
+            <?php echo get_theme_mod('paragraph_2_setting', ''); ?>
+        </p>
+        <p>
+            <?php echo get_theme_mod('paragraph_3_setting', ''); ?>
+        </p>
+        <p>
+            <?php echo get_theme_mod('paragraph_4_setting', ''); ?>
+        </p>
+        <div class="spacer-2"></div>
+        <figure>
+            <img src="https://www.bahai.in/wp-content/uploads/2023/10/divider-down-svg.svg" alt="" class="divider">
+        </figure>
+    </div>
+    <div class="temple-highlight">
+        <div class="box-container">
+            <div class="temple-title">
+                <div>
+                    <h2><?php echo get_theme_mod('line_one_setting', ''); ?><br />
+                        <?php echo get_theme_mod('line_two_setting', ''); ?>
+                    </h2>
+                    <a
+                        href="<?php echo get_theme_mod('line_three-link_setting', ''); ?>"><?php echo get_theme_mod('line_three_setting', ''); ?></a>
+                </div>
             </div>
         </div>
-        <div>
-            <img src="https://trial.trushargavit.com/wp-content/uploads/2022/05/design2b.webp" class="design-img"
-                alt="" />
+    </div>
+    <div class="spacer-5"></div>
+    <div class="box-container explore">
+        <h2 class="f-32"><?php echo get_theme_mod('boi_heading', ''); ?></h2>
+        <p>
+            <?php echo get_theme_mod('boi_description', ''); ?>
+        </p>
+        <div class="spacer-2"></div>
+        <div class="cl-3 flex-reverse-coloumn">
+            <div class="topic">
+                <!-- <div class="overlay"></div> -->
+                <figure>
+                    <a href="<?php echo get_theme_mod('link_1_setting', ''); ?>"><img
+                            src="<?php echo get_theme_mod('image_1_setting', ''); ?>" alt="" /></a>
+                </figure>
+                <h2><?php echo get_theme_mod('heading_1_setting', ''); ?></h2>
+            </div>
+            <div class="topic">
+                <!-- <div class="overlay"></div> -->
+                <figure>
+                    <a href="<?php echo get_theme_mod('link_2_setting', ''); ?>"><img
+                            src="<?php echo get_theme_mod('image_2_setting', ''); ?>" alt="" /></a>
+                </figure>
+                <h2><?php echo get_theme_mod('heading_2_setting', ''); ?></h2>
+            </div>
+            <div class="excerpt">
+                <div class="design-3"></div>
+                <h2><?php echo get_theme_mod('title_1_setting', ''); ?></h2>
+                <p>
+                    <?php echo get_theme_mod('excerpt_1_setting', ''); ?>
+                </p>
+                <a
+                    href="<?php echo get_theme_mod('read_more_link_1_setting', ''); ?>"><?php echo get_theme_mod('read_more_1_setting', ''); ?></a>
+            </div>
+        </div>
+    </div>
+    <div class="spacer-2"></div>
+    <div class="box-container">
+        <div class="d-flex">
+            <div class="excerpt w-30">
+                <div class="design-3"></div>
+                <h2><?php echo get_theme_mod('title_2_setting', ''); ?></h2>
+                <p>
+                    <?php echo get_theme_mod('excerpt_2_setting', ''); ?>
+                </p>
+                <a
+                    href="<?php echo get_theme_mod('read_more_link_2_setting', ''); ?>"><?php echo get_theme_mod('read_more_2_setting', ''); ?></a>
+            </div>
+            <div class="cl-grid-3 w-70">
+                <div class="topic">
+                    <!-- <div class="overlay"></div> -->
+                    <figure>
+                        <a href="<?php echo get_theme_mod('link_3_setting', ''); ?>"><img
+                                src="<?php echo get_theme_mod('image_3_setting', ''); ?>" alt="" /></a>
+                    </figure>
+                    <h2><?php echo get_theme_mod('heading_3_setting', ''); ?></h2>
+                </div>
+                <div class="topic">
+                    <!-- <div class="overlay"></div> -->
+                    <figure>
+                        <a href="<?php echo get_theme_mod('link_4_setting', ''); ?>"><img
+                                src="<?php echo get_theme_mod('image_4_setting', ''); ?>" alt="" /></a>
+                    </figure>
+                    <h2><?php echo get_theme_mod('heading_4_setting', ''); ?></h2>
+                </div>
+                <div class="topic">
+                    <!-- <div class="overlay"></div> -->
+                    <figure>
+                        <a href="<?php echo get_theme_mod('link_5_setting', ''); ?>"><img
+                                src="<?php echo get_theme_mod('image_5_setting', ''); ?>" alt="" /></a>
+                    </figure>
+                    <h2><?php echo get_theme_mod('heading_5_setting', ''); ?></h2>
+                </div>
+                <div class="topic">
+                    <!-- <div class="overlay"></div> -->
+                    <figure>
+                        <a href="<?php echo get_theme_mod('link_6_setting', ''); ?>"><img
+                                src="<?php echo get_theme_mod('image_6_setting', ''); ?>" alt="" /></a>
+                    </figure>
+                    <h2><?php echo get_theme_mod('heading_6_setting', ''); ?></h2>
+                </div>
+                <div class="topic">
+                    <!-- <div class="overlay"></div> -->
+                    <figure>
+                        <a href="<?php echo get_theme_mod('link_7_setting', ''); ?>"><img
+                                src="<?php echo get_theme_mod('image_7_setting', ''); ?>" alt="" /></a>
+                    </figure>
+                    <h2><?php echo get_theme_mod('heading_7_setting', ''); ?></h2>
+                </div>
+                <div class="topic">
+                    <!-- <div class="overlay"></div> -->
+                    <figure>
+                        <a href="<?php echo get_theme_mod('link_8_setting', ''); ?>"><img
+                                src="<?php echo get_theme_mod('image_8_setting', ''); ?>" alt="" /></a>
+                    </figure>
+                    <h2><?php echo get_theme_mod('heading_8_setting', ''); ?></h2>
+                </div>
+            </div>
+        </div>
+        <div class="spacer-2"></div>
+        <div class="india-temple-sites cl-3">
+            <div class="topic">
+                <!-- <div class="overlay"></div> -->
+                <figure>
+                    <a href="<?php echo get_theme_mod('link_temple_1_setting', ''); ?>"><img
+                            src="<?php echo get_theme_mod('image_temple_1_setting', ''); ?>" alt="" /></a>
+                </figure>
+                <h2><?php echo get_theme_mod('heading_temple_1_setting', ''); ?></h2>
+            </div>
+            <div class="topic">
+                <!-- <div class="overlay"></div> -->
+                <figure>
+                    <a href="<?php echo get_theme_mod('link_temple_2_setting', ''); ?>"><img
+                            src="<?php echo get_theme_mod('image_temple_2_setting', ''); ?>" alt="" /></a>
+                </figure>
+                <h2><?php echo get_theme_mod('heading_temple_2_setting', ''); ?></h2>
+            </div>
+            <div class="excerpt">
+                <div class="design-3"></div>
+                <h2><?php echo get_theme_mod('title_3_setting', ''); ?></h2>
+                <p>
+                    <?php echo get_theme_mod('excerpt_3_setting', ''); ?>
+                </p>
+                <a
+                    href="<?php echo get_theme_mod('read_more_link_3_setting', ''); ?>"><?php echo get_theme_mod('read_more_3_setting', ''); ?></a>
+            </div>
+        </div>
+    </div>
+    <div class="spacer-5"></div>
+    <div class="bihar-temple-highlight">
+        <div class="box-container">
+            <div class="bihar-temple-title">
+                <div>
+                    <h2><span class="cf"><?php echo get_theme_mod('b2_line_1', ''); ?><br>
+                            <?php echo get_theme_mod('b2_line_2', ''); ?></span>
+                        <?php echo get_theme_mod('b2_line_3', ''); ?><br>
+                        <?php echo get_theme_mod('b2_line_4', ''); ?> </h2>
+                    <a
+                        href="<?php echo get_theme_mod('b2_line_6', ''); ?>"><?php echo get_theme_mod('b2_line_5', ''); ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-container py-4">
+        <div class="other-sites">
+            <div class="other-card">
+                <img src="https://www.bahai.in/wp-content/uploads/2024/04/Frame-28.png" alt="" />
+                <h2>Bahá'í Office of Public Affairs</h2>
+                <a href="https://opa.bahai.in/">Visit »</a>
+            </div>
+            <div class="other-card">
+                <img src="https://www.bahai.in/wp-content/uploads/2024/04/Frame-12.png" alt="" />
+                <h2>Bahá'í Reference Library</h2><a href="https://library.bahai.in/">Visit »</a>
+            </div>
         </div>
     </div>
 </main>

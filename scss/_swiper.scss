@@ -1,26 +1,78 @@
 .swiper {
     width: 100%;
     height: 100%;
+  }
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
 
     img {
-        display: block;        
-        width: 1792px;
-        max-width: 100%;
-        height: 666px;
-        max-height: 100%;
+        display: block;
+        width: 100%;
         object-fit: cover;
+    }
 
-        @media(max-width:576px){
-            height: 200px !important;
+    .swiper-quote{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5rem 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        max-width: 500px;
+
+        h2{
+            font-size: 3rem;
         }
 
-        @media(max-width:1440px){
-            height: 500px;
+        span {
+            font-size: 1.5rem;
         }
 
-        @media(min-width:1900px){
-            width: 100%;
-            height: 100%;
+        p{
+            font-size: .8rem;
         }
+    }
+}
+
+.swiper-overlay {
+    background: rgb(19 19 19 / 19%);
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+
+    @media (max-width:767px){
+        height: 35vh;
+    }
+}
+
+.quote-animation.animate {
+    animation: slideInFromTop 0.5s ease;
+}
+
+.location.animate {
+    animation: slideInFromBottom 0.5s ease;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
     }
 }

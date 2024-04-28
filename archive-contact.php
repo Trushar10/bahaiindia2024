@@ -4,7 +4,15 @@ if (!defined('ABSPATH')) {
     exit; // For security
 }
 
+/*
+Template Name: Contact Us
+
+*/
+
+get_header();
+
 ?>
+
 <main>
     <!-- Swiper -->
     <div class="swiper mySwiper">
@@ -20,18 +28,6 @@ if (!defined('ABSPATH')) {
             </div>
         </div>
     </div>
-    <div class="gradient-1 py-4">
-        <div class="design-1"></div>
-        <div class="box-container">
-            <div class="quote">
-                <h2>
-                    <?php the_field('quote'); ?>
-                    <br /><br />- <?php the_field('author'); ?>
-                </h2>
-            </div>
-        </div>
-        <div class="design-2"></div>
-    </div>
     <div class="box-container py-4 index-content page-content">
         <figure>
             <img src="https://www.bahai.in/wp-content/uploads/2023/10/divider-up-svg.svg" alt="" class="divider" />
@@ -44,3 +40,5 @@ if (!defined('ABSPATH')) {
         </figure>
     </div>
 </main>
+
+<?php get_footer(); ?>

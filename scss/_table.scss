@@ -1,0 +1,59 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+
+    @media(max-width:767px){        
+        border: 1px solid #ddd;
+    }
+
+    thead {
+        @media(max-width:767px){
+            display: none;
+        }
+    }
+ 
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px 20px;
+        text-align: left;
+
+        p{
+            font-size: inherit;
+            margin-bottom: 0;
+        }
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+
+    td{
+        @media(max-width:767px){
+            border: none;
+        }
+    }
+    
+    select {
+        padding: 5px;
+    }
+
+    tr{
+        @media(max-width:767px){
+            display: flex;
+            flex-direction: column;
+        }
+
+        &:nth-child(even){
+            background: #00000008;
+        }
+    }
+}
+
+.table-filter {
+    text-align: center;
+
+    #stateSelect {
+        padding: 0.5rem;
+    }
+}

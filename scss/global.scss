@@ -1,130 +1,382 @@
-@import 'default';
-@import 'address';
-@import 'header';
-@import 'swiper';
+@import 'defaults';
 @import 'index';
-@import 'footer';
-@import 'page';
+@import 'nav';
 @import 'hamburger';
+@import 'swiper';
+@import 'lightbox';
+@import 'footer';
+@import 'searchbar';
+@import 'page';
+@import 'table';
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    font-family: $text-font;   
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
 }
 
-main {
-    color: $text-color;
+.wp-block-columns {
+	gap: 1rem;
 }
 
-input{
-    font-size: 1rem;
-    padding: .5rem;
+body {
+	font-family: $default-fonts;
+	-webkit-font-smoothing: antialiased;
+}
+
+.not-found {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h2 {
+		font-size: 6rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+
+		@media (max-width: 767px) {
+			font-size: 2rem;
+		}
+	}
+
+	a {
+		padding: 0.5rem 1rem;
+		border: 1px solid;
+	}
+}
+
+.search-result {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 1rem;
+	}
 }
 
 .show {
-    display: block !important;
+	display: block !important;
 }
 
-.container, .page-container, .main-container, .bottom-container{
-    margin-left: auto;
-    margin-right: auto;
+.box-container {
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
 
-    @media(max-width:576px){
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }   
+	@media (max-width: 1320px) {
+		padding: 0 2rem;
+	}
+
+	@media (orientation: portrait) and (min-width: 768px) and (max-width: 1320px) {
+		padding: 0 2rem;
+	}
 }
 
-.container{
-    max-width: 1220px;   
-
-     /* Portrait */
-    @media only screen 
-    and (min-device-width: 768px) 
-    and (max-device-width: 1024px) 
-    and (orientation: portrait) 
-    and (-webkit-min-device-pixel-ratio: 1) {
-        max-width: 700px;   
-    }
-
-    /* Landscape */
-    @media only screen 
-    and (min-device-width: 768px) 
-    and (max-device-width: 1180px) 
-    and (orientation: landscape) 
-    and (-webkit-min-device-pixel-ratio: 1) {
-        max-width: 900px;   
-    }
+.m-auto {
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.page-container{
-    max-width: 1777px;       
+.h-45 {
+	height: 45vh;
+
+	@media (max-width: 767px) {
+		height: 25vh;
+	}
 }
 
-.main-container{
-    max-width: 840px;   
+.h-60 {
+	height: 60vh;
 
-     /* Portrait */
-     @media only screen 
-     and (min-device-width: 768px) 
-     and (max-device-width: 1024px) 
-     and (orientation: portrait) 
-     and (-webkit-min-device-pixel-ratio: 1) {
-         max-width: 550px;   
-     }
-
-     /* Landscape */
-    @media only screen 
-    and (min-device-width: 768px) 
-    and (max-device-width: 1180px) 
-    and (orientation: landscape) 
-    and (-webkit-min-device-pixel-ratio: 1) {
-        max-width: 650px;   
-    }
+	@media (max-width: 767px) {
+		height: 35vh;
+	}
 }
 
-.bottom-container{
-    max-width: 1792px;
+.br-5 {
+	border-radius: 5px;
 }
 
-h2,h3,h4,h5,h6 {
-    font-weight: 500;
-    margin-bottom: 1rem;
-    line-height: 1.3;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	margin-bottom: 1rem;
 }
 
-a{
-    color: $anchor-color;
-    display: block;
-    text-decoration: none;
-    line-height: 1.3;
+a {
+	color: $text-color;
+	display: inline-block;
+	text-decoration: none;
 
-    &:hover{
-        text-decoration: underline;
-    }
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
-p{
-    text-align: justify;
-    margin-bottom: 1rem;
-    line-height: 1.3;
+p {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	text-align: justify;
+
+	@media (max-width: 767px) {
+		font-size: 1.1rem;
+	}
 }
 
-main {
-    a{
-        display: inline;
-    }
+img {
+	width: 100%;
+	// height: 100%;
+	object-fit: cover;
+}
 
-    ul{
-        list-style-position: inside;
-        color: $anchor-color;
-        margin-bottom: 1rem;
+.f-32 {
+	font-size: 32px;
 
-        li{           
-            padding: 1rem 0;            
-        }
-    }
+	@media (max-width: 767px) {
+		font-size: 1.5rem;
+	}
+}
+
+.spacer-1 {
+	height: 1rem;
+}
+
+.spacer-2 {
+	height: 2rem;
+}
+
+.spacer-25 {
+	height: 2.5rem;
+}
+
+.spacer-3 {
+	height: 3rem;
+}
+
+.spacer-4 {
+	height: 4rem;
+}
+
+.spacer-5 {
+	height: 5rem;
+}
+
+.py-4 {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.py-5 {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.gradient-1 {
+	position: relative;
+	background: linear-gradient(
+		93deg,
+		rgba(255, 225, 184, 0.8) -7.51%,
+		rgba(255, 230, 195, 0.66) 21.34%,
+		rgba(255, 234, 204, 0.32) 62.61%,
+		rgba(255, 225, 184, 0.8) 117.37%
+	);
+}
+
+.gradient-2 {
+	position: relative;
+	background: linear-gradient(
+		107deg,
+		#f2dbb9 -4.31%,
+		#fff0db 38.34%,
+		#fff 74.9%,
+		rgba(255, 255, 255, 0.5) 117.56%
+	);
+}
+
+.overlay {
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.4) 0%,
+		rgba(0, 0, 0, 0.1) 50%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+	z-index: 1;
+}
+
+.front-design {
+	background-image: url('https://www.bahai.in/wp-content/uploads/2024/04/front-design.svg');
+	height: 33rem;
+	width: 23rem;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+
+	@media (max-width: 767px) {
+		background-image: url('https://www.bahai.in/wp-content/uploads/2024/04/front-design-cropped-svg.svg');
+		top: 19%;
+		right: 0;
+		background-size: cover;
+		width: 8rem;
+		height: 15rem;
+	}
+}
+
+.design-1 {
+	background-image: url('https://www.bahai.in/wp-content/uploads/2023/10/bg-design-1.svg');
+	height: 18rem;
+	width: 20rem;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	@media (max-width: 767px) {
+		background-size: cover;
+		width: 10rem;
+		height: 10rem;
+	}
+}
+
+.design-2 {
+	background-image: url('https://www.bahai.in/wp-content/uploads/2023/10/bg-design-2.svg');
+	height: 15rem;
+	width: 24rem;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	@media (max-width: 767px) {
+		background-size: cover;
+		width: 12rem;
+		height: 10rem;
+		// display: none;
+	}
+}
+
+.design-3 {
+	background-image: url('https://www.bahai.in/wp-content/uploads/2023/10/bg-design-3.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 13rem;
+	height: 11rem;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.divider {
+	width: 192px;
+	height: 98px;
+}
+
+.topic {
+	position: relative;
+	transition: all 200ms ease-out;
+
+	&:hover {
+		transform: scale(1.02);
+	}
+
+	@media (max-width: 767px) {
+		&:hover {
+			transform: scale(1);
+		}
+	}
+
+	a {
+		width: 100%;
+	}
+
+	h2 {
+		position: absolute;
+		font-size: 1.2rem;
+		color: #fff;
+		bottom: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		z-index: 1;
+	}
+
+	figure {
+		height: 250px;
+		max-height: 250px;
+
+		img {
+			height: 250px;
+
+			@media (orientation: portrait) and (min-width: 768px) and (max-width: 1320px) {
+				height: 400px;
+			}
+		}
+
+		@media (orientation: portrait) and (min-width: 768px) and (max-width: 1320px) {
+			height: 400px;
+			max-height: 400px;
+		}
+	}
+}
+
+.cl-3 {
+	display: flex;
+	gap: 1rem;
+
+	& > * {
+		width: calc(100% / 3);
+
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column-reverse;
+	}
+}
+
+.flex-reverse-coloumn {
+	@media (max-width: 767px) {
+		flex-direction: column-reverse !important;
+	}
+}
+
+.cl-grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.w-30 {
+	width: 30%;
+
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+
+.w-70 {
+	width: 70%;
+
+	@media (max-width: 767px) {
+		width: 100%;
+	}
 }

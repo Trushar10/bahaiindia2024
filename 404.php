@@ -1,7 +1,7 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // For security
+if (!defined('ABSPATH')) {
+    exit; // For security
 }
 
 get_header();
@@ -9,20 +9,14 @@ get_header();
 ?>
 
 <main>
-    <div class="page-container">
+    <div class="box-container py-4 index-content page-content">
         <div class="not-found">
-            <div><svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor"
-                    class="bi bi-cone-striped" viewBox="0 0 16 16">
-                    <path
-                        d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z" />
-                </svg>
-            </div>
-            <div>
-                <h2>Ooops... Error 404</h2>
-                <h3>We are sorry, but the page you are looking for does not exist.</h3>
-                <p>Please check entered address and try again or </p>
-                <a href="<?php echo get_home_url(); ?>" class="home-btn" aria-label="homepage">go to homepage</a>
-            </div>
+            <div class="spacer-5"></div>
+            <h2>404</h2>
+            <h3>Page not found</h3>
+            <div class="spacer-1"></div>
+            <a href="<?php echo home_url(); ?>">Home »</a>
+            <div class="spacer-5"></div>
         </div>
     </div>
 </main>

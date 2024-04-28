@@ -26,7 +26,7 @@
 .menu_checkbox {
     position: absolute;
     top: 50%;
-    right: 1.5rem;
+    left: 1.5rem;
     display: block;
     width: 20px;
     height: 20px;
@@ -35,6 +35,10 @@
 
     @media (min-width:1200px) {
         display: none;
+    }
+
+    @media(max-width:767px){
+        top: 75%;
     }
 
      /* Portrait */
@@ -60,7 +64,7 @@
     position: relative;
     top: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: #000;
     margin-bottom: 6px;
     transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
         0.3s ease right;

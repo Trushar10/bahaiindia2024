@@ -1,250 +1,99 @@
-.hero{
-    position: relative;
+.swiper-overlay-1 {
+    background: linear-gradient(90deg, rgb(19 19 19 / 45%), rgba(255, 255, 0, 0));
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+
+    @media (max-width:767px){
+        height: 35vh;
+    }
+}
+
+.page-title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-wrap: balance;
+
+    @media(max-width:767px){
+        top: auto;
+        bottom: 0;
+    }
+
+    h2 {
+        position: relative;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        @media(max-width:767px){
+            font-size: 1.2rem;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            background: #ffd2a4;
+            width: 15px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 2px;
+
+            @media(max-width:767px){
+                bottom: -1px;
+                left: 0;
+            }
+        }
+    }    
+}
+
+.page-content {
+    a{
+        color: #a95346;
+    }
+    
+    ul {
+        font-size: 1.25rem;
+        padding-left: 2.5rem;
+
+        @media(max-width:767px){
+            font-size: 1.1rem;
+        }
+
+        li{
+            margin-bottom: .5rem;
+        }
+    }
 
     img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+        margin-bottom: 1rem;
 
-        @media(max-width:576px){
-            height: 200px !important;
-        }
-
-        @media(max-width:1366px){
-            height: 450px;
-        }
-
-        @media(min-width:1400px){
-            width: 100%;
-            height: 100%;
+        @media(max-width:767px){
+            margin-bottom: 0;
         }
     }
 
-    .page-title{
-        color: $hf-anchor-color;
-        background-color: #0000005e;
-        position: absolute;
-        bottom: 5%;
-
-        @media(max-width:576px){
-            font-size: 1rem;
+    iframe {
+        @media(max-width:767px){
+            max-width: 100%;
         }
     }
+    
 }
 
-.d-flex-column{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;   
-}
+.form-class {
+    padding: 1.5rem;
+    box-shadow: 0 0 9px 0 #0000002e;
 
-.wp-block-columns{
-    /* Portrait */
-    @media only screen 
-    and (min-device-width: 600px) 
-    and (max-device-width: 781px) 
-    and (orientation: portrait) 
-    and (-webkit-min-device-pixel-ratio: 1) {
-        flex-wrap: nowrap;        
-    } 
+    @media(max-width:767px){
+        padding: 0;
+        box-shadow: none;
+    }   
 
-    .wp-block-column{
-         /* Portrait */
-        @media only screen 
-        and (min-device-width: 600px) 
-        and (max-device-width: 781px) 
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 1) {
-            margin-left: 0 !important;
-        } 
-    }
-
-    .flex-basis-58{        
-        &.wp-block-column:not(:only-child){
-            /* Portrait */
-            @media only screen 
-            and (min-device-width: 600px) 
-            and (max-device-width: 781px) 
-            and (orientation: portrait) 
-            and (-webkit-min-device-pixel-ratio: 1) {
-                flex-basis: 150% !important;
-            } 
+    h2 {
+        @media(max-width:767px) {
+            margin-top: 30px;
         }
-    }
-}
-
-.d-m-flex-column{
-     /* Portrait */
-     @media only screen 
-     and (min-device-width: 600px) 
-     and (max-device-width: 781px) 
-     and (orientation: portrait) 
-     and (-webkit-min-device-pixel-ratio: 1) {
-        padding: 0 1rem; 
-        gap: 1rem;
-     } 
-}
-
-.justify-center{
-    display: flex;
-    justify-content: center;
-}
-
-.d-sm-none{
-    @media(max-width:768px){
-        display: none;
-    }
-}
-
-.side-nav{
-    li{
-        border-bottom: 1px solid #00000024;
-
-        &:last-child{
-            border-bottom: none;
-        }
-    }
-}
-
-.contact{
-    &.wp-block-column{
-        /* Portrait */
-        @media only screen 
-        and (min-device-width: 600px) 
-        and (max-device-width: 781px) 
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 1) {
-            margin-left: 1rem !important;
-        } 
-    }
-}
-
-.contact, .form {
-    .wp-block-separator{
-        border-bottom: none;
-        width: 25%;
-    }
-}
-
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    input, textarea {
-        font-size: 1rem;
-        border: 1px solid $text-color;
-        border-radius: 0;
-        width: 100%;
-        padding: .5rem;
-
-        &::placeholder {
-            font-size: .9rem;
-        }
-    }
-
-    .name {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .wpcf7-submit{
-        width: 40%;
-        background-color: transparent;
-        transition: all .3s ease-in-out;
-
-        &:hover{
-            cursor: pointer;
-            color: $hf-anchor-color;
-            background-color: #000;
-        }
-    }
-}
-
-.p-ul {
-    li{
-        padding: .5rem 0;
-    }
-}
-
-.s-d-flex{
-    display: flex;
-    justify-content: flex-end;
-
-    @media(max-width: 576px){
-        justify-content: flex-start;
-    }
-
-    .side-nav{
-        width: 40%;
-
-        @media(min-width:576px) and (max-width:1366px){
-            width: 80%;
-        }
-
-        /* Portrait */
-        @media only screen 
-        and (min-device-width: 600px) 
-        and (max-device-width: 781px) 
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 1) {
-            width: 90%;
-        } 
-
-         /* Landscape */
-         @media only screen 
-         and (min-device-width: 768px) 
-         and (max-device-width: 1180px) 
-         and (orientation: landscape) 
-         and (-webkit-min-device-pixel-ratio: 1) {
-            width: 90%;
-         }
-        
-        @media(max-width: 576px){
-            width: 100%;
-        }
-    }
-}
-
-
-.flex-basis-58{
-
-    h2, h3 {
-        @media(max-width:576px){
-            font-size: 1rem;
-        }
-    }
-
-    @media(max-width:1366px){
-        flex-basis: 60% !important;
-    }
-   
-}
-
-.not-found{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15rem 0;
-    gap: 1rem;
-
-    @media(max-width:576px){
-        flex-direction: column;
-    }
-
-    h2{
-        font-size: 3rem;
-    }
-
-    h3{
-        font-size: 1.5rem;
-    }
-
-    .home-btn{
-        display: inline-block;
-        color: $text-color;
-        padding: 1rem;
-        border: 1px solid $text-color;
     }
 }
